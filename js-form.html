@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>js form</title>
+  
+  <style type="text/css" media="all">
+  
+    body{
+      background: #271700;
+    }
+    .fullForm{
+      display: flex;
+      background: white;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 22%;
+      gap: 25px;
+      border-radius: 20px;
+      box-shadow:0 0px 5px #FFE9C0;
+      overflow: hidden;
+      max-width: 550px;
+    }
+    
+    .leftSection{
+      background-color: #704500;
+      color: white;
+      width: 68%;
+      height: 360px;
+      padding: 8px 8px;
+      text-align: center;
+      border-end-start-radius: 20px;
+      border-start-start-radius: 20px;
+      position: relative;
+    }
+    
+    .comLogo{
+      width: 50px;
+      border-radius: 50px;
+      position: absolute;
+      left: 13px;
+      top: 31px;
+    }
+    .laplogo{
+      width: 100px;
+      border-radius: 10px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    .comName{
+      text-align: right;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+    .comdes{
+      margin-top: 0;
+      text-align: right;
+      font-size: 12px;
+      margin-right: 5px;
+    }
+    
+    .desLink{
+      text-decoration: none;
+      color: #FFA000;
+      font-weight: bold;
+    }
+    
+    .topicsub{
+      margin-top: 0px;
+      font-size: 15px;
+      
+    }
+    .topic{
+      margin-bottom: 0px;
+      margin-top: 10px;
+    }
+    
+    .emailAdd, .password{
+      height: 35px;
+      margin-bottom: 8px;
+      border: 1.5px solid gray;
+      border-radius: 5px;
+      padding-left: 8px;
+      font-weight: bold;
+      width: 260px;
+    }
+    
+    .rem{
+      font-size: 11px;
+      margin-right: 40px;
+      font-weight: bold;
+    }
+    
+    .forget{
+      font-size: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .check{
+      margin-bottom: 15px;
+    }
+    
+    .submit{
+      height: 36px;
+      width: 265px;
+      background-color: #FFB400;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    
+    .or{
+      text-align: center;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .google{
+      height: 36px;
+      width: 265px;
+      border: 2px solid gray;
+      border-radius: 10px;
+      font-weight: bold;
+      background-color: transparent;
+    }
+    
+    .notice{
+      font-size: 14px;
+      text-align: center;
+      margin-right: 20px;
+    }
+    
+   
+  
+    
+    @media (max-width: 736px) {
+      .fullForm {
+        margin: 50px 1%;
+        gap: 15px;
+      }
+  
+      .leftSection {
+        background-color: #704500;
+        width: 42%;
+        height: 400px;
+      }
+      .comName{
+        margin-top: 55px;
+        margin-bottom: 0px;
+        margin-right: 5px;
+      }
+      .comLogo{
+        left: 38px;
+        top: 20px;
+      }
+      .comdes{
+        text-align: center;
+      }
+      .laplogo{
+        margin-bottom: 18px;
+        margin-top: 18px;
+      }
+      .forget{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+      } 
+      .check{
+      margin-bottom: 8px;
+      }
+      .emailAdd, .password{
+        width: 200px;
+      }
+      .submit{
+        width: 200px;
+      }
+      .google{
+        width: 200px;
+      }
+      .rem{
+        font-size: 14px;
+      }
+      .topic{
+        font-size: 28px;
+      }
+    }
+    
+    
+  </style>
+  
+</head>
+<body>
+ 
+  <div class="fullForm">
+    
+    <div class="leftSection">
+      
+      <img class="comLogo" src="logo.jpg" alt="" />
+      <div class="nameTopic">
+        <h1 class="comName">Zennex</h1>
+        <p class="comdes">Build innovative grow</p>
+      </div> 
+      <img class="laplogo" src="group.jpeg" alt="" />
+      
+      <h4 class="descrip">Your dream Website<br><a class="desLink" href="">Start Here</a></h4>
+      
+    </div>
+    
+    <div class="formSec">
+      
+      <h1 id="result" class="topic">Login</h1>
+      <p class="topicsub">welcome back pls login into your account</p>
+      
+      <input id="emailInput" type="email" class="emailAdd" 
+      placeholder="Email Address"/><br>
+      
+      <input id="password" type="password" class="password"
+      placeholder="Password"><br>
+      
+      <input onclick="showPassword()" class="check" type="checkbox" name="rem">
+      <label class="rem" for="rem">Show Password</label>
+      
+      <a class="forget" href="">Forgot Password</a>
+      
+      <button onclick="login()" class="submit">Login </button>
+      
+      <p class="or">or</p>
+      
+      <button class="google">Login with Google</button>
+      
+      <p class="notice">Do you have an accounts? <a href="#">Sign Up</a></p>
+      
+    </div>
+    
+  </div>
+  
+  <script type="text/javascript" charset="utf-8">
+    
+    const email = document.getElementById("emailInput");
+    const passwordInput = document.getElementById("password");
+    const loginSubmit = document.getElementById("submit");
+    const show = document.getElementById("showPassword");
+
+
+    function login(){
+      let emailInput = email.value
+      if (password.value=='admin123' && email=="admin@gmail.com"){
+        result.textContent="Access Granted"
+      }
+      else{
+        result.textContent='Access Denied'
+      }
+    }
+    
+    function showPassword(){
+       if(passwordInput.type==='password'){
+         passwordInput.type='text'
+       }
+       else{
+         passwordInput.type='password'
+       }
+    }
+    
+  </script>
+  
+</body>
+</html>
